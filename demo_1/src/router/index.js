@@ -23,6 +23,12 @@ import register from '../views/samples/user-pages/register'
 //  Table Components
 import basicTables from '../views/tables/basic-table'
 
+// Ted Added Components, Video and chat
+import videolist from '../views/video/videolist'
+import addvideo from '../views/video/addvideo'
+
+import chatmenu from '../views/chatmenu/chatmenu'
+
 Vue.use(Router)
 
 export default new Router({
@@ -64,6 +70,19 @@ export default new Router({
         path: '/basic_table',
         name: 'basicTables',
         component: basicTables
+      },
+      {
+        path: '/chatmenu',
+        name: 'chatmenu',
+        component: chatmenu
+      },
+      {
+        path: '/video/videolist',
+        component: videolist
+      },
+      {
+        path: '/video/addvideo',
+        component: addvideo
       }
     ]
   },

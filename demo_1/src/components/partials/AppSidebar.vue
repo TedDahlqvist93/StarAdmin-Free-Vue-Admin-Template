@@ -2,18 +2,7 @@
   <section class="app-sidebar">
     <nav class="sidebar sidebar-offcanvas" id="sidebar">
       <ul class="nav">
-        <li class="nav-item nav-profile">
-          <a href="#" class="nav-link">
-            <div class="profile-image">
-              <img class="img-xs rounded-circle" src="../../assets/images/faces/face8.jpg" alt="profile image">
-              <div class="dot-indicator bg-success"></div>
-            </div>
-            <div class="text-wrapper">
-              <p class="profile-name">Allen Moreno</p>
-              <p class="designation">Premium user</p>
-            </div>
-          </a>
-        </li>
+
         <li class="nav-item nav-category">Main Menu</li>
         <li class="nav-item">
           <a class="nav-link" v-b-toggle="'dashboard-dropdown'">
@@ -108,11 +97,32 @@
             </ul>
           </b-collapse>
         </li>
+        <li class="nav-item"></li>
+
         <li class="nav-item">
-          <a class="nav-link" href="https://www.bootstrapdash.com/product/star-admin-vue/docs/documentation.html">
+          <a class="nav-link">
+
             <i class="menu-icon typcn typcn-document-add"></i>
-            <span class="menu-title">Doc</span>
+            <router-link class="nav-link menu-title align-left" to="/chatmenu/">Chat Menu</router-link>
           </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" v-b-toggle="'video'">
+            <i class="menu-icon typcn typcn-document-add"></i>
+            <span class="menu-title">Video</span>
+            <i class="menu-arrow"></i>
+          </a>
+          <b-collapse id="video">
+            <ul class="nav flex-column sub-menu">
+              <li class="nav-item">
+                <router-link class="nav-link" to="/video/addvideo/">Add Video</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link" to="/video/videolist/">Video List</router-link>
+              </li>
+            </ul>
+          </b-collapse>
         </li>
       </ul>
     </nav>
